@@ -1,6 +1,7 @@
 build/
 data/
 .env.test
+logs/
 projects/
 secret/
 temp/
