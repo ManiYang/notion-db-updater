@@ -1,13 +1,12 @@
 import { createLogger, format, transports } from 'winston';
 
 export const logger = createLogger({
-    level: (process.env.NODE_ENV === 'development') ? 'debug' : 'info',
+    level: 'info',
     transports: [
         new transports.Console({
             format: format.combine(
                 format.colorize({ all: true }),
                 format.timestamp({ format: 'MM-DD HH:mm:ss.SSS'}),
-                format.align(),
                 format.printf(info => `${info.timestamp} ${info.level}: ${info.message}`)
             )
         }),

@@ -19,5 +19,8 @@
     "@notionhq/client": "^2.2.15",
     "dotenv": "^16.4.7",
     "winston": "^3.17.0"
+  },
+  "mocha": {
+    "timeout": 10000
   }
 }
